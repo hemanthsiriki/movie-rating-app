@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: movieapp-svc
+  labels:
+    name: movieapp-svc
+    app: backend
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    targetPort: 8080
+    nodePort: 30003
+  selector:
+    name: movie-app
+    app: backend

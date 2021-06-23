@@ -1,0 +1,38 @@
+
+spring:
+  application:
+    name: movie-rating-app
+  data:
+    mongodb:
+      uri: mongodb://${MONGO_ROOT_USERNAME}:${MONGO_ROOT_PASSWORD}@10.224.122.17:30994/admin
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+
+logging:
+  level:
+    root: info
+
+server:
+  port: 8080
+
+management:
+  endpoint:
+    health:
+      show-details: always
+    info:
+      enabled: true
+    beans:
+      enabled: true
+    metrics:
+      enabled: true
+  info:
+    build:
+      enabled: true
+    defaults:
+      enabled: true
+  endpoints:
+    enabled-by-default: true
+
+
+
+

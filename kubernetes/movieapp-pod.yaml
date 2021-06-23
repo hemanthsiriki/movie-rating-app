@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Pod
+metadata:
+  name: movie-app-deploy
+  labels:
+    app: movie-app
+spec:
+  metadata:
+    labels:
+      name: movie-app
+      app: backend
+  spec:
+    containers:
+    - name: movie-app
+      image: containers.cisco.com/hesiriki/movie-app:latest
